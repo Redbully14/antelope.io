@@ -1,5 +1,7 @@
 @extends('master.app')
 
+@section('title', 'Dashboard')
+
 @section('content')
 <div id="content-page" class="content-page">
 
