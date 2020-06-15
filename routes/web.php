@@ -13,6 +13,33 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
+});
+*/
+
+/*
+|--------------------------------------------------------------------------
+| Main Website Routes
+|--------------------------------------------------------------------------
+|
+*/
+
+/**
+ * Webdomain: /dashboard
+ *
+ * @author Oliver (Redbully14urh@gmail.com)
+ * @package GET
+ * @category BaseRoutes
+ * @access  
+ * @version 1.0.0
+ */
+Route::get('/dashboard', [
+  'as' => 'dashboard',
+  'uses' => 'Antelope@dashboard'
+]);
+
+Route::get('/', function () {
+    return redirect('/dashboard');
 });
