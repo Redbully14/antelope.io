@@ -12,7 +12,7 @@
                 </ul>
             </div>
 
-            <div class="col-lg-6 text-right">Copyright 2020 <a href="#">Sofbox</a> All Rights Reserved.</div>
+            <div class="col-lg-6 text-right">{{ COMMUNITY_NAME }} 2020 © <a href="#">{{ 'APP_VERSION' }}</a></div>
 
         </div>
     </div>

@@ -6,7 +6,7 @@
             <div class="top-logo">
                 <a href="index.html" class="logo">
                     <img src="{{ asset('images/logo.png') }}" class="img-fluid" alt="">
-                    <span>Sofbox</span>
+                    <span>{{ APPLICATION_NAME }}</span>
                 </a>
             </div>
         </div>
