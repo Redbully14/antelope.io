@@ -43,3 +43,6 @@ Route::get('/dashboard', [
 Route::get('/', function () {
     return redirect('/dashboard');
 });
+
+/* File location: routes/web.php */
+/* End of File - web.php */

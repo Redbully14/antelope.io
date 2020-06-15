@@ -5,7 +5,7 @@
 
         <a href="index.html">
             <img src="{{ asset('images/logo.png') }}" class="img-fluid" alt="">
-            <span>Sofbox</span>
+            <span>{{ APPLICATION_NAME }}</span>
         </a>
 
         <div class="iq-menu-bt align-self-center">

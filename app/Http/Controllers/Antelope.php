@@ -27,5 +27,6 @@ class Antelope extends Controller
         return view('dashboard');
     }
 
+    /* File location: app/Http/Controllers/Antelope.php */
     /* End of File - Antelope.php */
 }
