@@ -32,7 +32,7 @@ Route::get('/', function () {
  * @author Oliver (Redbully14urh@gmail.com)
  * @package GET
  * @category BaseRoutes
- * @access  
+ * @access @Auth
  * @version 1.0.0
  */
 Route::get('/dashboard', [
@@ -42,6 +42,30 @@ Route::get('/dashboard', [
 
 Route::get('/', function () {
     return redirect('/dashboard');
+});
+
+
+Route::namespace('AntelopePublic')->group(function() {
+	/*
+	|--------------------------------------------------------------------------
+	| Public Antelope Routes
+	|--------------------------------------------------------------------------
+	|
+	*/
+
+	/**
+	 * Webdomain: /login
+	 *
+	 * @author Oliver (Redbully14urh@gmail.com)
+	 * @package GET
+	 * @category BaseRoutes
+	 * @access @everyone
+	 * @version 1.0.0
+	 */
+	Route::get('/login', [
+	  'as' => 'login',
+	  'uses' => 'AntelopeAuth@showLoginForm'
+	]);
 });
 
 /* File location: routes/web.php */

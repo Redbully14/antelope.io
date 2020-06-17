@@ -60,7 +60,7 @@
 | Main Website constants [@ENV]
 | ------------------------
 | ! THESE CONSTANTS ARE ALL ENVIROMENT CONSANTS AND CAN BE EDITED THROUGH
-| THE .ENV FILE !
+| THE .ENV FILE - EDITING IT HERE WILL NOT DO ANYTHING !
 | + Here you can change and edit stuff such as the website name, footer
 | information and other general website stuff.
 |--------------------------------------------------------------------------
@@ -68,6 +68,7 @@
 */
 
 define("APPLICATION_NAME", env('APP_NAME', 'Antelope'));
+define("APPLICATION_FULL_NAME", env('APP_FULL_NAME', 'Antelope.io'));
 define("COMMUNITY_NAME", env('COMMUNITY_NAME', 'The Best Community'));
 
 return [];

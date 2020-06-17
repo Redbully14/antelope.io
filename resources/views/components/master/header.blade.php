@@ -12,11 +12,11 @@
         </div>
 
         <div class="navbar-breadcrumb">
-            <h5 class="mb-0">Blank-Page</h5>
+            <h5 class="mb-0">{{ $title }}</h5>
             <nav aria-label="breadcrumb">
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Blank-Page</li>
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ $title }}</li>
                 </ul>
             </nav>
         </div>

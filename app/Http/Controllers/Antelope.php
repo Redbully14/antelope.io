@@ -16,9 +16,23 @@ class Antelope extends Controller
     /**
      * Executes before running the main controllers
      *
-     * @author Oliver G.
+     * @author Oliver (Redbully14urh@gmail.com)
      * @param
-     * @return Laravel\View
+     * @return 
+     * @access @everyone
+     * @version 1.0.0
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
+     * Backend handling for the main dashboard system
+     *
+     * @author Oliver (Redbully14urh@gmail.com)
+     * @param
+     * @return \Illuminate\Contracts\Support\Renderable
      * @access @everyone
      * @version 1.0.0
      */
@@ -27,6 +41,6 @@ class Antelope extends Controller
         return view('dashboard');
     }
 
-    /* File location: app/Http/Controllers/Antelope.php */
+    /* File location: App/Http/Controllers/Antelope.php */
     /* End of File - Antelope.php */
 }
