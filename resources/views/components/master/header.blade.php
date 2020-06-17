@@ -38,13 +38,18 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto navbar-list">
 
+                    <!-- Antelope.io - Header - Search Bar -->
+                    <!--
                     <li class="nav-item">
                         <a class="search-toggle iq-waves-effect" href="#"><i class="ri-search-line"></i></a>
                         <form action="#" class="search-box">
                             <input type="text" class="text search-input" placeholder="Type here to search..." />
                         </form>
                     </li>
+                    -->
 
+                    <!-- Antelope.io - Header - Messages -->
+                    <!--
                     <li class="nav-item dropdown">
                         <a href="#" class="search-toggle iq-waves-effect">
                             <i class="ri-mail-line"></i>
@@ -137,13 +142,11 @@
                                 </div>
                             </div>
                         </div>
-
                     </li>
+                    -->
 
-                    <li class="nav-item">
-                        <a href="#" class="iq-waves-effect"><i class="ri-shopping-cart-2-line"></i></a>
-                    </li>
-                    
+                    <!-- Antelope.io - Header - Notifications -->
+                    <!--
                     <li class="nav-item">
 
                         <a href="#" class="search-toggle iq-waves-effect">
@@ -224,7 +227,9 @@
                         </div>
 
                     </li>
+                    -->
 
+                    <!-- Antelope.io - Header - Full Screen -->
                     <li class="nav-item iq-full-screen"><a href="#" class="iq-waves-effect" id="btnFullscreen"><i class="ri-fullscreen-line"></i></a></li>
 
                 </ul>
@@ -240,11 +245,12 @@
                             <div class="iq-card-body p-0 ">
 
                                 <div class="bg-primary p-3">
-                                    <h5 class="mb-0 text-white line-height">Hello Nik jone</h5>
-                                    <span class="text-white font-size-12">Available</span>
+                                    <h5 class="mb-0 text-white line-height">Hello {{ auth()->user()->name }}</h5>
+                                    <span class="text-white font-size-12">Rank goes here</span>
                                 </div>
 
-                                <a href="profile.html" class="iq-sub-card iq-bg-primary-hover">
+                                <!--
+                                <a href="#" class="iq-sub-card iq-bg-primary-hover">
                                     <div class="media align-items-center">
 
                                         <div class="rounded iq-card-icon iq-bg-primary">
@@ -259,7 +265,7 @@
                                     </div>
                                 </a>
 
-                                <a href="profile-edit.html" class="iq-sub-card iq-bg-primary-success-hover">
+                                <a href="#" class="iq-sub-card iq-bg-primary-success-hover">
                                     <div class="media align-items-center">
 
                                         <div class="rounded iq-card-icon iq-bg-success">
@@ -274,7 +280,7 @@
                                     </div>
                                 </a>
 
-                                <a href="account-setting.html" class="iq-sub-card iq-bg-primary-danger-hover">
+                                <a href="#" class="iq-sub-card iq-bg-primary-danger-hover">
                                     <div class="media align-items-center">
 
                                         <div class="rounded iq-card-icon iq-bg-danger">
@@ -289,7 +295,7 @@
                                     </div>
                                 </a>
 
-                                <a href="privacy-setting.html" class="iq-sub-card iq-bg-primary-secondary-hover">
+                                <a href="#" class="iq-sub-card iq-bg-primary-secondary-hover">
                                     <div class="media align-items-center">
 
                                         <div class="rounded iq-card-icon iq-bg-secondary">
@@ -303,9 +309,10 @@
 
                                     </div>
                                 </a>
-
+                                -->
+                                
                                 <div class="d-inline-block w-100 text-center p-3">
-                                    <a class="iq-bg-danger iq-sign-btn" href="sign-in.html" role="button">Sign out<i class="ri-login-box-line ml-2"></i></a>
+                                    <a class="iq-bg-danger iq-sign-btn" href="/logout" role="button">Sign out<i class="ri-login-box-line ml-2"></i></a>
                                 </div>
 
                             </div>

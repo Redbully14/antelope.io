@@ -5,6 +5,7 @@
         <!-- Antelope.io - Website Meta Tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ APPLICATION_FULL_NAME }} :: Login</title>
 
@@ -29,11 +30,11 @@
 			<div class="container-fluid p-0">
 				<div class="row no-gutters">
 
-					<div class="col-sm-6 align-self-center">
+					<div class="col-sm-4 align-self-center">
 						<x-auth.signin/>
 					</div>
 
-					<div class="col-sm-6 text-center">
+					<div class="col-sm-8 text-center">
 						<div class="sign-in-detail text-white" style="background: url(assets/images/login/2.jpg) no-repeat 0 0; background-size: cover;">
 
 							<a class="sign-in-logo mb-5" href="#"><img src="{{ asset('images/logo-white.png') }}" class="img-fluid" alt="logo"></a>
@@ -41,20 +42,20 @@
 							<div class="owl-carousel" data-autoplay="true" data-loop="true" data-nav="false" data-dots="true" data-items="1" data-items-laptop="1" data-items-tab="1" data-items-mobile="1" data-items-mobile-sm="1" data-margin="0">
 
 								<div class="item">
-									<img src="{{ asset('images/login/1.png') }}" class="img-fluid mb-4" alt="logo">
-									<h4 class="mb-1 text-white">Manage your orders</h4>
+									<img src="{{ asset('images/login/1.png') }}" class="img-fluid mx-auto d-block mb-4" alt="logo" style="width: 80%; height: auto;">
+									<h4 class="mb-1 text-white">Manage your community</h4>
 									<p>It is a long established fact that a reader will be distracted by the readable content.</p>
 								</div>
 
 								<div class="item">
-									<img src="{{ asset('images/login/1.png') }}" class="img-fluid mb-4" alt="logo">
-									<h4 class="mb-1 text-white">Manage your orders</h4>
+                                    <img src="{{ asset('images/login/1.png') }}" class="img-fluid mx-auto d-block mb-4" alt="logo" style="width: 80%; height: auto;">
+									<h4 class="mb-1 text-white">Manage your community</h4>
 									<p>It is a long established fact that a reader will be distracted by the readable content.</p>
 								</div>
 
 								<div class="item">
-									<img src="{{ asset('images/login/1.png') }}" class="img-fluid mb-4" alt="logo">
-									<h4 class="mb-1 text-white">Manage your orders</h4>
+                                    <img src="{{ asset('images/login/1.png') }}" class="img-fluid mx-auto d-block mb-4" alt="logo" style="width: 80%; height: auto;">
+									<h4 class="mb-1 text-white">Manage your community</h4>
 									<p>It is a long established fact that a reader will be distracted by the readable content.</p>
 								</div>
 
@@ -112,7 +113,10 @@
         <script src="{{ asset('js/chart-custom.js') }}"></script>
 
         <!-- Custom JavaScript -->
-        <script src="{{ asset('js/custom.js') }}"></script>
+        <script src="{{ asset('js/sofbox.js') }}"></script>
+
+        <!-- App JavaScript -->
+        <script src="{{ asset('js/app.js') }}"></script>
         <!-- #END - Javascript -->
 
     </body>

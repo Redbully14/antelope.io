@@ -21,9 +21,6 @@ class AntelopeAuth extends Controller
      * Where to redirect users after login
      *
      * @author Oliver (Redbully14urh@gmail.com)
-     * @param
-     * @return App\Providers\RouteServiceProvider
-     * @access @Auth
      * @version 1.0.0
      */
     protected $redirectTo = RouteServiceProvider::HOME;

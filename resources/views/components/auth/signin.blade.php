@@ -10,6 +10,7 @@
 
 	<form method="POST" action="{{ route('login') }}" class="mt-4">
 		@csrf
+
 		<div class="form-group">
 			<label for="email">Email address</label>
 			<input type="email" class="form-control mb-0 @error('email') is-invalid @enderror" name="email" id="email" value="{{ old('email') }}" placeholder="Email" required>
@@ -38,6 +39,7 @@
 			</div>
 
 			<button type="submit" class="btn btn-primary float-right">Sign in</button>
+			
 		</div>
 
 	</form>

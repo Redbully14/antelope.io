@@ -5,6 +5,7 @@
         <!-- Antelope.io - Website Meta Tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ APPLICATION_FULL_NAME }} :: @yield('title')</title>
 
@@ -82,8 +83,11 @@
         <!-- Chart Custom JavaScript -->
         <script src="{{ asset('js/chart-custom.js') }}"></script>
 
-        <!-- Custom JavaScript -->
-        <script src="{{ asset('js/custom.js') }}"></script>
+        <!-- Sofbox JavaScript -->
+        <script src="{{ asset('js/sofbox.js') }}"></script>
+
+        <!-- App JavaScript -->
+        <script src="{{ asset('js/app.js') }}"></script>
         <!-- #END - Javascript -->
 
     </body>

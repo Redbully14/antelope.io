@@ -85,6 +85,20 @@ Route::namespace('AntelopePublic')->group(function() {
 	  'as' => 'login',
 	  'uses' => 'AntelopeAuth@login'
 	]);
+
+	/**
+	 * Webdomain: /login
+	 *
+	 * @author Oliver (Redbully14urh@gmail.com)
+	 * @package GET
+	 * @category AntelopePublic
+	 * @access @everyone
+	 * @version 1.0.0
+	 */
+	Route::get('/logout', [
+	  'as' => 'logout',
+	  'uses' => 'AntelopeAuth@logout'
+	]);
 });
 
 /* File location: routes/web.php */
