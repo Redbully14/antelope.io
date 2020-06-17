@@ -28,7 +28,7 @@
         <div class="wrapper">
 
             <x-master.sidebar/>
-            <x-master.header title="@yield('title')"/>
+            <x-master.header title="{{ View::getSection('title', 'An error has occured...') }}"/>
 
             <!-- Antelope.io - Page Content  -->
             @yield('content')

@@ -44,6 +44,11 @@ Route::get('/', function () {
     return redirect('/dashboard');
 });
 
+Route::get('/developer_debug', [
+	'as' => 'developer_debug',
+	'uses' => 'AntelopeDeveloper@antelopeDebug'
+]);
+
 
 Route::namespace('AntelopePublic')->group(function() {
 	/*
@@ -58,13 +63,27 @@ Route::namespace('AntelopePublic')->group(function() {
 	 *
 	 * @author Oliver (Redbully14urh@gmail.com)
 	 * @package GET
-	 * @category BaseRoutes
+	 * @category AntelopePublic
 	 * @access @everyone
 	 * @version 1.0.0
 	 */
 	Route::get('/login', [
 	  'as' => 'login',
 	  'uses' => 'AntelopeAuth@showLoginForm'
+	]);
+
+	/**
+	 * Webdomain: /login
+	 *
+	 * @author Oliver (Redbully14urh@gmail.com)
+	 * @package POST
+	 * @category AntelopePublic
+	 * @access @everyone
+	 * @version 1.0.0
+	 */
+	Route::post('/login', [
+	  'as' => 'login',
+	  'uses' => 'AntelopeAuth@login'
 	]);
 });
 
