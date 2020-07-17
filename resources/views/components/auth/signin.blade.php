@@ -1,5 +1,5 @@
 <!-- Antelope.io - Sign-in Component -->
-<div class="sign-in-from">
+<div class="sign-in-from" style="padding: 30px;">
 
 	<h1 class="mb-0">Sign in</h1>
 	<p>Please enter your email address and password.</p>

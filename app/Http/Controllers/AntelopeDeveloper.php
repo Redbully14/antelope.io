@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use App\User;
+use App\Http\Controllers\AntelopeDepartment;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class AntelopeDeveloper extends Controller
 {
@@ -30,7 +33,7 @@ class AntelopeDeveloper extends Controller
 
     /**
      * I'll litterally do whatever I want in this file and nobody can judge me.
-     *
+     *  
      * @author Oliver (Redbully14urh@gmail.com)
      * @param
      * @return \Illuminate\Contracts\Support\Renderable
@@ -39,8 +42,9 @@ class AntelopeDeveloper extends Controller
      */
     public function antelopeDebug()
     {
-        $password = Hash::make('password');
-        return view('debug')->with('password', $password);
+        $user = auth()->user();
+        $department = User::find(1)->departments()->orderBy('name')->get();
+        return view('debug')->with('department', $user->selected_department);
     }
 
     /* File location: App/Http/Controllers/AntelopeDeveloper.php */

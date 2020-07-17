@@ -19,6 +19,8 @@
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <!-- Antelope.io - Responsive CSS -->
         <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+        <!-- Antelope.io - Application CSS -->
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     </head>
     <body>
@@ -29,7 +31,7 @@
         <div class="wrapper">
 
             <x-master.sidebar/>
-            <x-master.header title="{{ View::getSection('title', 'An error has occured...') }}"/>
+            <x-master.header title="{{ View::getSection('title', 'An error has occured...') }}" :departments="auth()->user()->departments"/>
 
             <!-- Antelope.io - Page Content  -->
             @yield('content')

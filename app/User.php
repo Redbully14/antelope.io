@@ -8,32 +8,50 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+    /*
+    |--------------------------------------------------------------------------
+    | Antelope User Model
+    |--------------------------------------------------------------------------
+    |
+    */
+
     use Notifiable;
 
     /**
      * The attributes that are mass assignable.
      *
-     * @var array
+     * @author Oliver (Redbully14urh@gmail.com)
+     * @var arr
+     * @version 1.0.0
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'selected_department'
     ];
 
     /**
      * The attributes that should be hidden for arrays.
      *
-     * @var array
+     * @author Oliver (Redbully14urh@gmail.com)
+     * @var arr
+     * @version 1.0.0
      */
     protected $hidden = [
         'password', 'remember_token',
     ];
 
     /**
-     * The attributes that should be cast to native types.
+     * Executes many-to-many relationships to enable users to be in many departments.
      *
-     * @var array
+     * @author Oliver (Redbully14urh@gmail.com)
+     * @param
+     * @return \Illuminate\Database\Eloquent\Model
+     * @access @everyone
+     * @version 1.0.0
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    public function departments() {
+        return $this->belongsToMany('App\Department');
+    }
+
+    /* File location: App/Http/User.php */
+    /* End of File - User.php */
 }

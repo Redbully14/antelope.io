@@ -67,8 +67,8 @@
 |
 */
 
-define("APPLICATION_NAME", env('APP_NAME', 'Antelope'));
-define("APPLICATION_FULL_NAME", env('APP_FULL_NAME', 'Antelope.io'));
-define("COMMUNITY_NAME", env('COMMUNITY_NAME', 'The Best Community'));
+/* [@ENV] */ define("APPLICATION_NAME", env('APP_NAME', 'Antelope'));
+/* [@ENV] */ define("APPLICATION_FULL_NAME", env('APP_FULL_NAME', 'Antelope.io'));
+/* [@ENV] */ define("COMMUNITY_NAME", env('COMMUNITY_NAME', 'The Best Community'));
 
 return [];

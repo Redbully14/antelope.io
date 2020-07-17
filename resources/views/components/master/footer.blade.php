@@ -12,7 +12,7 @@
                 </ul>
             </div>
 
-            <div class="col-lg-6 text-right">{{ COMMUNITY_NAME }} 2020 © <a href="#">{{ 'APP_VERSION' }}</a></div>
+            <div class="col-lg-6 text-right">{{ COMMUNITY_NAME }} {{ date('Y') }} © <a href="#">{{ 'APP_VERSION' }}</a></div>
 
         </div>
     </div>

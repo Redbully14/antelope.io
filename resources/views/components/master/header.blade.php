@@ -38,6 +38,51 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto navbar-list">
 
+                    @if(count(auth()->user()->departments) > 1)
+                    <!-- Antelope.io - Header - Department Selection -->
+                    <li class="nav-item">
+
+                        <a href="#" class="search-toggle iq-waves-effect">
+                            <i>{{ auth()->user()->departments[auth()->user()->selected_department]->id }} - {{ auth()->user()->departments[auth()->user()->selected_department]->name }}</i>
+                        </a>
+
+                        <div class="iq-sub-dropdown">
+                            <div class="iq-card shadow-none m-0">
+                                <div class="iq-card-body p-0 ">
+
+                                    <div class="bg-info p-3">
+                                        <h5 class="mb-0 text-white">Department Selection<small class="badge  badge-light float-right pt-1">{{ count(auth()->user()->departments) }}</small></h5>
+                                    </div>
+
+                                    @foreach($departments as $department)
+                                    <a href="#" class="iq-sub-card" >
+                                        <div class="media align-items-center">
+
+                                            <div class="media-body ml-3">
+                                                <h6 class="mb-0 ">{{ $department->id }} - {{ $department->name }}</h6>
+                                                <p class="mb-0">Department rank goes here</p>
+                                            </div>
+
+                                        </div>
+                                    </a>
+                                    @endforeach
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+
+                    @else
+                    <li class="nav-item">
+
+                        <a class="search-toggle">
+                            <i>{{ auth()->user()->departments->first()->name }}</i>
+                        </a>
+
+                    </li>
+                    @endif
+
                     <!-- Antelope.io - Header - Search Bar -->
                     <!--
                     <li class="nav-item">
