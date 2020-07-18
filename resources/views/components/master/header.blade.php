@@ -42,8 +42,8 @@
                     <!-- Antelope.io - Header - Department Selection -->
                     <li class="nav-item">
 
-                        <a href="#" class="search-toggle iq-waves-effect">
-                            <i>{{ auth()->user()->departments[auth()->user()->selected_department]->id }} - {{ auth()->user()->departments[auth()->user()->selected_department]->name }}</i>
+                        <a href="javascript:void(0)" class="search-toggle iq-waves-effect">
+                            {{ auth()->user()->departments->where('id', auth()->user()->selected_department)->implode('name', ' / ') }} <span class="caret down"></span></span>
                         </a>
 
                         <div class="iq-sub-dropdown">
@@ -55,11 +55,11 @@
                                     </div>
 
                                     @foreach($departments as $department)
-                                    <a href="#" class="iq-sub-card" >
+                                    <a href="javascript:void(0)" class="iq-sub-card aioscript-department-select" data-department-id="{{ $department->id }}">
                                         <div class="media align-items-center">
 
                                             <div class="media-body ml-3">
-                                                <h6 class="mb-0 ">{{ $department->id }} - {{ $department->name }}</h6>
+                                                <h6 class="mb-0 ">{{ $department->name }}</h6>
                                                 <p class="mb-0">Department rank goes here</p>
                                             </div>
 
@@ -290,7 +290,7 @@
                             <div class="iq-card-body p-0 ">
 
                                 <div class="bg-primary p-3">
-                                    <h5 class="mb-0 text-white line-height">Hello {{ auth()->user()->name }}</h5>
+                                    <h5 class="mb-0 text-white line-height">{{ auth()->user()->name }}</h5>
                                     <span class="text-white font-size-12">Rank goes here</span>
                                 </div>
 

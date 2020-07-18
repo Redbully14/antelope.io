@@ -45,6 +45,7 @@ class AntelopeDepartment extends Controller
     	}
 
     	$user->selected_department = $department_id;
+        $user->save();
 
     	return;
     }

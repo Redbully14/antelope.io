@@ -8,16 +8,40 @@ NOTE: This file contains all the application-wide css for the entire website.
 [  Table of contents  ]
 ================================================
 
-:: Header
+:: General Items
+:: - Caret
 
 ======================================
 [ End table content ]
 ======================================*/
 
 /*--------------------------------------------------------------------
-                            Header
+                            General Items
 ---------------------------------------------------------------------*/
 
-.ant-header .department-select .department-select {
-  
+/*
+[  Caret  ]
+*/
+.caret {
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border: 4px solid transparent;
+    text-align: center;
+}
+
+.caret.down {
+    border-top-color: white;
+}
+
+.caret.right {
+    border-left-color: white;
+}
+
+.caret.up {
+    border-bottom-color: white;
+}
+
+.caret.left{
+    border-right-color: white;
 }

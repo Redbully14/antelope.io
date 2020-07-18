@@ -44,9 +44,32 @@ Route::get('/', function () {
     return redirect('/dashboard');
 });
 
+/**
+ * Webdomain: /developer_debug
+ *
+ * @author Oliver (Redbully14urh@gmail.com)
+ * @package GET
+ * @category BaseRoutes
+ * @access @Auth
+ * @version 1.0.0
+ */
 Route::get('/developer_debug', [
 	'as' => 'developer_debug',
 	'uses' => 'AntelopeDeveloper@antelopeDebug'
+]);
+
+/**
+ * Webdomain: /switch_department/{id}
+ *
+ * @author Oliver (Redbully14urh@gmail.com)
+ * @package POST
+ * @category BaseRoutes
+ * @access @Auth
+ * @version 1.0.0
+ */
+Route::post('/switch_department/{department_id}', [
+  'as' => 'switch_department',
+  'uses' => 'AntelopeDepartment@switchDepartment'
 ]);
 
 

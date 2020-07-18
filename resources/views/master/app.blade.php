@@ -90,6 +90,12 @@
 
         <!-- App JavaScript -->
         <script src="{{ asset('js/app.js') }}"></script>
+
+        <!-- Page Template JavaScript -->
+        <script src="{{ asset('js/partialjs/header.js') }}"></script>
+
+        <!-- Page JavaScript -->
+        @yield('javascript')
         <!-- #END - Javascript -->
 
     </body>

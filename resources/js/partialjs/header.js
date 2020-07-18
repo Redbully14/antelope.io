@@ -1,26 +1,29 @@
 /*
 Application: Antelope.io
 Author: Oliver (Redbully14urh@gmail.com)
-NOTE: This file contains all the application-wide javascript for the entire website.
+NOTE: This file contains all the javascript for the header
 */
 
 /*----------------------------------------------
 Index Of Script
 ------------------------------------------------
 
-:: Ajax CSRF Setup
+:: Department Selection
 
 ------------------------------------------------
 Index Of Script
 ----------------------------------------------*/
 
-const base_url = window.location.origin;
-
 /*---------------------------------------------------------------------
-Ajax CSRF Setup
+Department Selection
 -----------------------------------------------------------------------*/
-$.ajaxSetup({
-	headers: {
-		'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-	}
+$('.aioscript-department-select').on('click', function () {
+    var id = $(this).data("department-id");
+    $.ajax({
+    	type: 'POST',
+        url: base_url+'/switch_department/'+id,
+        success: function() {
+        	location.reload(true);
+        }
+    });
 });
